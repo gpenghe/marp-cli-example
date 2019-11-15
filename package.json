@@ -7,6 +7,9 @@
   "scripts": {
     "build": "rimraf dist && npm run -s og-image && npm run -s deck",
     "deck": "marp --no-stdin main.md -o dist/index.html && cpx \"assets/**/*\" dist/assets",
+    "pdf": "marp --no-stdin main.md -o dist/main.pdf",
+    "pptx": "marp --allow-local-files --no-stdin main.md -o dist/main.pptx",
+    "pptx-live": "marp --allow-local-files --no-stdin --watch main.md -o dist/main.pptx",
     "now-build": "npm run -s deck",
     "og-image": "marp main.md -o dist/og-image.jpg",
     "start": "marp -ps ."
